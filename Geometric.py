@@ -44,7 +44,7 @@ def BasketOption(bg,mubg,d1baskethat,d2baskethat,OptionType,K):
         print "Not correct basket option."
 
 def Volatilitybg(sigma1, sigma2, rou, n):
-    sigmabg = math.sqrt(sigma1*sigma2*rou)/n
+    sigmabg = math.sqrt(sigma1*sigma2*rou*2+sigma1**2+sigma2**2)/n
     return sigmabg
 
 def Driftbg(sigma1,sigma2,n,sigmabg):
